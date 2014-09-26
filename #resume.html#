@@ -1,0 +1,69 @@
+<!DOCTYPE >
+
+<head> 
+<title> Woody Butler Resume </title>
+<link href="resume.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <h1> The Official Resume of Woody "The Rock" Butler </h1>
+
+    <h2> Education </h2>
+    <p> Tufts University
+    	  Major in Computer Science, Minor in Entrepreneurial & Leadership Studies <br>
+    	  Cumulative GPA: 3.15 <br>
+    	  Relevant Coursework:
+    	  Organic Chemistry I & II, Calculus II, Entrepreneurship and Business Planning, Entrepreneurial Marketing 
+    	</p>
+    <h2> Experience </h2>
+    	<p> <h3> Kerafast Inc. </h3>
+    		<div class="position"> eMarketing Intern </div> <br>
+    		Optimized Google Adwords pay-per-click spending resulting in $20,000 savings over 2 years<br>
+                Tracked all product shipping, including temperature-sensitive and international packages 
+        </p>
+        <p> <h3> Hydrogen Fueled Vehicles and Hybrid Applications </h3>
+            <div class="position"> Senior Scientist </div>
+                Created presentations in preparation for seed funding <br>
+                Researched compressed natural gas and hydrogen fuel markets 
+         </p>
+    <h2> Leadership </h2>
+    <p> <h3> Varsity Track and Field </h3>
+        <div class="position"> 400m </div>
+        Dedicated 12 hours offseason/20 hours on season per week to training and competing <br>
+        Organized team of 120 athletes as sole Team Captain of high school team during 2011 and 2012 seasons
+    </p>
+    <p>
+    <h3> Tufts Consulting Collective </h3>
+    <div class="position"> Project Manager </div>
+    Consulted local pizzeria on marketing and sales opportunities within Tufts Campus <br>
+    Built social media presence for pizzeria alongside brainstorming promotions
+    </p>
+    <p> <h3> American Chemical Society </h3>
+        <div class="position"> Secretary </div>
+        Drafted proposal to scure funding from Tufts Community Union Senate<br>
+        Updated members with events and meetings
+    </p>
+    <h2> Interests and skills </h2>
+    <p>
+        <div class="skillCat"> Technical Skills: </div>
+        C++, HTML, CSS, Javascript
+        <div class="skillCat"> Activities </div>
+        Delta Tau Delta Fraternity, LUX Fashion Show, Tufts Burlesque Troupe
+        <div class="skillCat"> Interests </div>
+        Cooking, Conversational Spanish, Running, Electric Guitar
+
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
