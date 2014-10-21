@@ -35,11 +35,12 @@ function initialize(pos) {
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+        fillmap();
+
       }
       navigator.geolocation.getCurrentPosition(initialize);
       google.maps.event.addDomListener(window, 'load', initialize);
-      fillmap();
-
+      
 
 var requestInfo = "login=SnowWhite&lat="+crd.latitude+"&lng="+crd.longitude;
 
