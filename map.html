@@ -46,8 +46,9 @@ var requestInfo = "login=SnowWhite&lat="+crd.latitude+"&lng="+crd.longitude;
 var xhr = new XMLHttpRequest();
 function fillmap() {
 	console.log(requestInfo);
-	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
+	
 	xhr.send(requestInfo);
 	xhr.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
