@@ -42,7 +42,7 @@ function initialize(pos) {
 
 var login = "SnowWhite";
 
-var xhr = new XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 xhr.open('SEND', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send("login=SnowWhite&lat="+crd.latitude+"&lng="+crd.longitude);
