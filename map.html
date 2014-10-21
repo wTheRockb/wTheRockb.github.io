@@ -44,7 +44,7 @@ var login = "SnowWhite";
 
 function initialize(crd) {
         var mapOptions = {
-          center: { lat: crd.latitude, lng: crd.longitude},
+          center: { lat: crd.coords.latitude, lng: crd.coords.longitude},
           zoom: 13
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
