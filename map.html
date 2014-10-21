@@ -38,21 +38,25 @@ function initialize(pos) {
       }
       navigator.geolocation.getCurrentPosition(initialize);
       google.maps.event.addDomListener(window, 'load', initialize);
+      fillmap();
 
 
 var requestInfo = "login=SnowWhite&lat="+crd.latitude+"&lng="+crd.longitude;
 
 var xhr = new XMLHttpRequest();
-
-xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
-xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-xhr.send(requestInfo);
-/*xhr.onreadystatechange = function() {
-if(http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
-		console.log("probs got data back");
+function fillmap() {}
+	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.send(requestInfo);
+	xhr.onreadystatechange = function() {
+	if(http.readyState == 4 && http.status == 200) {
+	        alert(http.responseText);
+			console.log("probs got data back");
+		}
+	object = JSON.parse(xhr.responseText);
 	}
-}*/
+	console.log("got thro fillmpa");
+}
 
 </script>
 
