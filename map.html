@@ -13,8 +13,7 @@
 <script>
 // geolocation
 
-var lat;
-var lng;
+
 var crd;
 
 function success(pos) {
@@ -43,7 +42,7 @@ function getLocation () {
 
 var login = "SnowWhite";
 
-function initialize() {
+function initialize(crd) {
         var mapOptions = {
           center: { lat: crd.latitude, lng: crd.longitude},
           zoom: 13
