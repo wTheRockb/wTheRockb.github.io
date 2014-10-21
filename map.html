@@ -15,7 +15,7 @@
 
 
 var crd;
-var myLatlng;
+var myLatlng = new google.maps.LatLng(-42,72);
 
 function success(pos) {
    crd = pos.coords;
@@ -67,7 +67,7 @@ function fillmap() {
 }
 
 function makeMarkers(){
-	var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+	var myLatlng = new google.maps.LatLng(-42,72);
 	marker = new google.maps.Marker({
     position: myLanglng,
     map: map,
