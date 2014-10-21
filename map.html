@@ -24,12 +24,8 @@ function success(pos) {
   console.log('Longitude: ' + crd.longitude);
   console.log('More or less ' + crd.accuracy + ' meters.');
 };
-
-
 navigator.geolocation.getCurrentPosition(success);
 
-
-var login = "SnowWhite";
 
 function initialize(pos) {
 		crd = pos.coords;
@@ -43,6 +39,11 @@ function initialize(pos) {
       navigator.geolocation.getCurrentPosition(initialize);
       google.maps.event.addDomListener(window, 'load', initialize);
 
+
+var login = "SnowWhite";
+
+var xhr = new XMLHttpRequest;
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 
 
