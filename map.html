@@ -48,7 +48,7 @@ function fillmap() {
 	
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
-	
+	console.log("bout ot send shit");
 	xhr.send(requestInfo);
 	xhr.onreadystatechange = function() {
 	if(http.readyState == 4 && http.status == 200) {
