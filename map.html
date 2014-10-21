@@ -62,12 +62,14 @@ function fillmap() {
 	
 	}
 	makeMarkers();
+	marker.setMap(map);
 }
 
 function makeMarkers(){
 	var marker = new google.maps.Marker({
 					position: landmark,
 					title: "Faneuil Hall, Boston, MA"
+
 
 	});
 }
