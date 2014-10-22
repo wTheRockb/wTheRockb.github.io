@@ -76,6 +76,7 @@ function makeMarkers(){
 	console.log("ay girl");
 	for (i=0; i< myStuds.length; i++)
 	{
+		lat = myStuds[i].lat;
 		markerArray[i] = new google.maps.Marker({
 	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
@@ -83,7 +84,7 @@ function makeMarkers(){
 	    console.log("ay girl");
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
-					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + myStuds[i].lat);
+					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat);
 					infowindow.open(map, this);
 				});
 	}
