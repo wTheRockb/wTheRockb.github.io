@@ -15,8 +15,9 @@
 
 
 var crd;
-var myLatLng = new google.maps.LatLng(42,-72);
+infowindow = new google.maps.InfoWindow();
 var object;
+
 function success(pos) {
    crd = pos.coords;
 
@@ -70,7 +71,6 @@ function fillmap() {
 }
 
 function makeMarkers(){
-	var myLatLng = new google.maps.LatLng(42,-72);
 	myStuds = object.students;
 	console.log("ay girl");
 	for (i=0; i< myStuds.length; i++)
@@ -78,10 +78,13 @@ function makeMarkers(){
 		marker = new google.maps.Marker({
 	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
-	    title:"Hello World!"});
+	    title:"Hello "});
 	    console.log("ay girl");
 	    marker.setMap(map);
-	    
+	    google.maps.event.addListener(marker, 'click', function() {
+					infowindow.setContent(marker.title);
+					infowindow.open(map, marker);
+				});
 	}
 
 }
