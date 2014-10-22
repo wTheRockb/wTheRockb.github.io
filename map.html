@@ -87,7 +87,7 @@ function makeMarkers(){
 	    title:myStuds[i]["login"]});
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
-					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
+					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + this.lat + "<br>" + "Longitude: " + this.lng + "</p>");
 					infowindow.open(map, this);
 				});
 	}
@@ -107,7 +107,7 @@ function makeCMarkers(){
 	    title: myChars[i]["name"]});
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
-					infowindow.setContent(this["name"] + "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
+					infowindow.setContent(this["name"] + "<br>" + "<p>" + "Latitude: " + this.lat + "<br>" + "Longitude: " + this.lng + "</p>");
 					infowindow.open(map, this);
 				});
 	}
