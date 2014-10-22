@@ -17,13 +17,12 @@ var myLoc = new google.maps.LatLng(myLat, myLng);
 var infowindow = new google.maps.InfoWindow();
 var request =  new XMLHttpRequest();
 var mapOptions = {
-          center: { lat: 42.3581, lng: -71.0636},
+          center: { myLoc},
           zoom: 16
 };
 var response;
 var map;
-var markerArray = [];
-var markerCArray = [];
+
 
 function initialize () {
 	 map = new google.maps.Map(document.getElementById('map-canvas'),
