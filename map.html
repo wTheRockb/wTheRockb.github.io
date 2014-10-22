@@ -99,13 +99,13 @@ function makeCMarkers(){
 	{
 		lat = myChars[i][loc].latitude;
 		lng = myChars[i][loc].longitude;
-		markerArray[i] = new google.maps.Marker({
+		markerCArray[i] = new google.maps.Marker({
 	    position: createCoords(myChars[i][loc]["latitude"], myChars[i][loc]["longitude"]),
 	    map: map,
 	    title:myChars[i]["name"]});
 	    console.log("ay girl");
-	    markerArray[i].setMap(map);
-	    google.maps.event.addListener(markerArray[i], 'click', function() {
+	    markerCArray[i].setMap(map);
+	    google.maps.event.addListener(markerCArray[i], 'click', function() {
 					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng);
 					infowindow.open(map, this);
 				});
