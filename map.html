@@ -65,6 +65,7 @@ function fillmap() {
 		object = JSON.parse(xhr.responseText);
 		console.log("about ot call");
 	makeMarkers();
+	makeCMarkers();
 		}
 	
 	}
@@ -94,7 +95,7 @@ function makeMarkers(){
 
 function makeCMarkers(){
 	myChars = object.characters;
-	console.log("ay girl");
+	console.log("ay girl this makeCmarkers");
 	for (i=0; i< myChars.length; i++)
 	{
 		lat = myChars[i][loc].latitude;
@@ -106,7 +107,7 @@ function makeCMarkers(){
 	    console.log("ay girl");
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
-					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng);
+					infowindow.setContent(this["name"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng);
 					infowindow.open(map, this);
 				});
 	}
