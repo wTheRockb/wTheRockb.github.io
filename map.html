@@ -91,6 +91,28 @@ function makeMarkers(){
 	}
 
 }
+
+function makeCMarkers(){
+	myChars = object.characters;
+	console.log("ay girl");
+	for (i=0; i< myStuds.length; i++)
+	{
+		lat = myStuds[i].lat;
+		lng = myStuds[i].lng;
+		markerArray[i] = new google.maps.Marker({
+	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
+	    map: map,
+	    title:myStuds[i]["login"]});
+	    console.log("ay girl");
+	    markerArray[i].setMap(map);
+	    google.maps.event.addListener(markerArray[i], 'click', function() {
+					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng);
+					infowindow.open(map, this);
+				});
+	}
+
+}
+
 </script>
 
 
