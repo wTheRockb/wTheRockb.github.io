@@ -63,12 +63,12 @@ function fillmap(pus) {
 	
 	xhr.send(requestInfo);
 	xhr.onreadystatechange = function() {
-	if(xhr.readyState == 4 && xhr.status == 200) {
-			console.log("probs got data back");
-		object = JSON.parse(xhr.responseText);
-		console.log("about ot call");
-	makeMarkers();
-	makeCMarkers();
+		if(xhr.readyState == 4 && xhr.status == 200) {
+				console.log("probs got data back");
+			object = JSON.parse(xhr.responseText);
+			console.log("about ot call");
+			makeMarkers();
+			makeCMarkers();
 		}
 	
 	}
@@ -83,9 +83,9 @@ function makeMarkers(){
 		var lat = myStuds[i].lat;
 		var lng = myStuds[i].lng;
 		markerArray[i] = new google.maps.Marker({
-	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
-	    map: map,
-	    title:myStuds[i]["login"]});
+		    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
+		    map: map,
+		    title:myStuds[i]["login"]});
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
 					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + this.lat + "<br>" + "Longitude: " + this.lng + "</p>");
