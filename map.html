@@ -17,6 +17,7 @@
 var crd;
 infowindow = new google.maps.InfoWindow();
 var object;
+var markerArray = [];
 
 function success(pos) {
    crd = pos.coords;
@@ -75,14 +76,14 @@ function makeMarkers(){
 	console.log("ay girl");
 	for (i=0; i< myStuds.length; i++)
 	{
-		marker = new google.maps.Marker({
+		markerArray[i] = new google.maps.Marker({
 	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
-	    title:"Hello "});
+	    title:myStuds[i]["login"]});
 	    console.log("ay girl");
-	    marker.setMap(map);
-	    google.maps.event.addListener(marker, 'click', function() {
-					infowindow.setContent(marker.title);
+	    markerArray[i].setMap(map);
+	    google.maps.event.addListener(markerArray[i], 'click', function() {
+					infowindow.setContent(markerArray[i].title);
 					infowindow.open(map, marker);
 				});
 	}
