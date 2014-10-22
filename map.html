@@ -98,10 +98,10 @@ function makeCMarkers(){
 	console.log("ay girl this makeCmarkers");
 	for (i=0; i< myChars.length; i++)
 	{
-		lat = myChars[i][loc].latitude;
-		lng = myChars[i][loc].longitude;
+		lat = myChars[i]["loc"].latitude;
+		lng = myChars[i]["loc"].longitude;
 		markerCArray[i] = new google.maps.Marker({
-	    position: createCoords(myChars[i][loc]["latitude"], myChars[i][loc]["longitude"]),
+	    position: createCoords(myChars[i]["loc"]["latitude"], myChars[i]["loc"]["longitude"]),
 	    map: map,
 	    title:myChars[i]["name"]});
 	    console.log("ay girl");
