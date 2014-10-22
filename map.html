@@ -54,9 +54,10 @@ function createCoords(lat, lng){
 
 
 function fillmap(pus) {
-	crd=pus.coords;
+	var disLat= pus.coords.latitude;
+	var disLng= pus.coords.longitude;
 	xhr = new XMLHttpRequest();
-	requestInfo = "login=SnowWhite&lat"+ crd.latitude +"&lng=" + crd.longitude;
+	requestInfo = "login=SnowWhite&lat"+ disLat +"&lng=" + disLng;
 	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	
