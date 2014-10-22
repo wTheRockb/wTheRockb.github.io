@@ -1,16 +1,5 @@
-<!DOCTYPE html>
+map.js
 
-<html>
-<head>
-<title> The Marauder's Maaeeepp </title>
-
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css" type="text/css" />
-<script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?sensor=true">
-      </script>
-
-<script>
 var myLat;
 var myLng;
 var myLoc = new google.maps.LatLng(myLat, myLng);
@@ -43,6 +32,7 @@ function getmylocation(){
                 alert("Geolocation is not supported by your web browser.  Upgrade required");
         }
 }
+
 function drawMap() //fills map, marks self with infowindow
 {
         
@@ -214,23 +204,3 @@ function haversineFormula(lat, lng)
         //convert the R to miles
         return R * c *0.6213;
 }
-
-
-
-
-</script>
-
-
-
-</head>
-
-<body>
-	<h1> the mordor's maep </h1>
-	<div id="map-canvas"></div>
-	<div id="DistanceDisplay"></div>
-
-
-</body>
-
-
-</html>
