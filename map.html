@@ -83,8 +83,8 @@ function makeMarkers(){
 	    console.log("ay girl");
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
-					infowindow.setContent(markerArray[i]["title"]);
-					infowindow.open(map, markerArray[i]);
+					infowindow.setContent(this["title"]);
+					infowindow.open(map, this);
 				});
 	}
 
