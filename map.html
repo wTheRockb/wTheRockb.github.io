@@ -84,7 +84,6 @@ function makeMarkers(){
 	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
 	    title:myStuds[i]["login"]});
-	    console.log("ay girl");
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
 					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
@@ -104,8 +103,7 @@ function makeCMarkers(){
 		markerCArray[i] = new google.maps.Marker({
 	    position: createCoords(myChars[i]["loc"]["latitude"], myChars[i]["loc"]["longitude"]),
 	    map: map,
-	    title:myChars[i]["name"]});
-	    console.log("ay girl");
+	    title:myChars[i].name});
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
 					infowindow.setContent(this["name"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
