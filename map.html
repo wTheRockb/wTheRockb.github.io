@@ -40,7 +40,7 @@ function initialize(pos) {
         };
         map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
-        fillmap();
+        navigator.geolocation.getCurrentPosition(fillmap);
 
       }
       navigator.geolocation.getCurrentPosition(initialize);
@@ -53,7 +53,8 @@ function createCoords(lat, lng){
 }
 
 
-function fillmap() {
+function fillmap(pos) {
+	crd=pos.coords;
 	xhr = new XMLHttpRequest();
 	requestInfo = "login=SnowWhite&lat"+ crd.latitude +"&lng=" + crd.longitude;
 	xhr.open('POST', 'http://chickenofthesea.herokuapp.com/sendLocation', true);
