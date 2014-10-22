@@ -84,7 +84,7 @@ function makeMarkers(){
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
 					infowindow.setContent(markerArray[i]["title"]);
-					infowindow.open(map, marker);
+					infowindow.open(map, markerArray[i]);
 				});
 	}
 
