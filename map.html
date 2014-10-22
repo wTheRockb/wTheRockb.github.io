@@ -71,10 +71,11 @@ function fillmap() {
 
 function makeMarkers(){
 	var myLatLng = new google.maps.LatLng(42,-72);
+	myStuds = object.students;
 	for (i=0; i< object.students.length; i++)
 	{
 		marker = new google.maps.Marker({
-	    position: createCoords(object.students[i].lat, object.students[i].lng),
+	    position: createCoords(myStuds[i]["lat"], object.students[i]["lng"]),
 	    map: map,
 	    title:"Hello World!"});
 	}
