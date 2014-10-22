@@ -62,7 +62,6 @@ function fillmap() {
 	xhr.send(requestInfo);
 	xhr.onreadystatechange = function() {
 	if(xhr.readyState == 4 && xhr.status == 200) {
-	        alert("hey your readystatechangeworked");
 			console.log("probs got data back");
 		object = JSON.parse(xhr.responseText);
 		console.log("about ot call");
@@ -107,8 +106,8 @@ function makeCMarkers(){
 	    title: myChars[i]["name"]});
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
-	    			var currLat = object.characters[i]["loc"]["latitude"];
-	    			var currLng = object.characters[i]["loc"]["longitude"];
+	    			 currLat = object.characters[i]["loc"]["latitude"];
+	    			 currLng = object.characters[i]["loc"]["longitude"];
 					infowindow.setContent(this["title"] + "<br>" + "<p>" + "Latitude: " + currLat + "<br>" + "Longitude: " + currLng + "</p>");
 					infowindow.open(map, this);
 				});
