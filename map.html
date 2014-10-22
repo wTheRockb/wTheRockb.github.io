@@ -33,9 +33,9 @@ navigator.geolocation.getCurrentPosition(success);
 */
 
 function initialize(pos) {
-		crd = pos.coords;
+		cred = pos.coords;
         var mapOptions = {
-          center: { lat: crd.latitude, lng: crd.longitude},
+          center: { lat: cred.latitude, lng: cred.longitude},
           zoom: 16
         };
         map = new google.maps.Map(document.getElementById('map-canvas'),
