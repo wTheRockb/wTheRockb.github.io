@@ -109,7 +109,7 @@ function makeCMarkers(){
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
 	    			 currLat = object.characters[i]["loc"]["latitude"];
 	    			 currLng = object.characters[i]["loc"]["longitude"];
-					infowindow.setContent(markerCArray[i]["title"] + "<br>" + "<p>" + "Latitude: " + this["loc"]["latitude"] + "<br>" + "Longitude: " + this["loc"]["longitude"] + "</p>");
+					infowindow.setContent(markerCArray[i]["title"] + "<br>" + "<p>" + "Latitude: " + markerCArray[i]["loc"]["latitude"] + "<br>" + "Longitude: " + markerCArray[i]["loc"]["longitude"] + "</p>");
 					infowindow.open(map, this);
 				});
 	}
