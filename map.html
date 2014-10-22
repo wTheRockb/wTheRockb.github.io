@@ -108,7 +108,7 @@ function makeCMarkers(){
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
 	    			var currLat = object.characters[i]["loc"]["latitude"];
-	    			var currLng = object.characters[i]["loc"]["longitude"]
+	    			var currLng = object.characters[i]["loc"]["longitude"];
 					infowindow.setContent(this["name"] + "<br>" + "<p>" + "Latitude: " + currLat + "<br>" + "Longitude: " + currLng + "</p>");
 					infowindow.open(map, this);
 				});
