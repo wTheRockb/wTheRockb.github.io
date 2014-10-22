@@ -84,7 +84,7 @@ function makeMarkers(){
 	    console.log("ay girl");
 	    markerArray[i].setMap(map);
 	    google.maps.event.addListener(markerArray[i], 'click', function() {
-					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat);
+					infowindow.setContent(this["title"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng);
 					infowindow.open(map, this);
 				});
 	}
