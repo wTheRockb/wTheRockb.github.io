@@ -20,6 +20,7 @@ var object;
 var markerArray = [];
 var markerCArray = [];
 
+/*
 function success(pos) {
    crd = pos.coords;
 
@@ -29,7 +30,7 @@ function success(pos) {
   console.log('More or less ' + crd.accuracy + ' meters.');
 };
 navigator.geolocation.getCurrentPosition(success);
-
+*/
 
 function initialize(pos) {
 		crd = pos.coords;
@@ -103,10 +104,10 @@ function makeCMarkers(){
 		markerCArray[i] = new google.maps.Marker({
 	    position: createCoords(myChars[i]["loc"]["latitude"], myChars[i]["loc"]["longitude"]),
 	    map: map,
-	    title:myChars[i].name});
+	    title: myChars[i]["name"]});
 	    markerCArray[i].setMap(map);
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
-					infowindow.setContent(this["name"]+ "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
+					infowindow.setContent(this["name"] + "<br>" + "<p>" + "Latitude: " + lat + "<br>" + "Longitude: " + lng + "</p>");
 					infowindow.open(map, this);
 				});
 	}
