@@ -105,10 +105,11 @@ function makeCMarkers(){
 	    map: map,
 	    title: myChars[i]["name"]});
 	    markerCArray[i].setMap(map);
+
 	    google.maps.event.addListener(markerCArray[i], 'click', function() {
 	    			 currLat = object.characters[i]["loc"]["latitude"];
 	    			 currLng = object.characters[i]["loc"]["longitude"];
-					infowindow.setContent(this["title"] + "<br>" + "<p>" + "Latitude: " + this["loc"]["latitude"] + "<br>" + "Longitude: " + this["loc"]["longitude"] + "</p>");
+					infowindow.setContent(markerCArray[i]["title"] + "<br>" + "<p>" + "Latitude: " + this["loc"]["latitude"] + "<br>" + "Longitude: " + this["loc"]["longitude"] + "</p>");
 					infowindow.open(map, this);
 				});
 	}
