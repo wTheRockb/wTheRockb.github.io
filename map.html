@@ -71,13 +71,13 @@ function fillmap() {
 }
 
 function makeMarkers(){
-	//var myLatLng = new google.maps.LatLng(42,-72);
-	//myStuds = object.students;
+	var myLatLng = new google.maps.LatLng(42,-72);
+	myStuds = object.students;
 	console.log("ay girl");
-	for (i=0; i< object.students.length; i++)
+	for (i=0; i< myStuds.length; i++)
 	{
 		marker = new google.maps.Marker({
-	    position: createCoords(myStuds[i]["lat"], object.students[i]["lng"]),
+	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
 	    title:"Hello World!"});
 	    console.log("ay girl");
