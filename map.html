@@ -77,6 +77,7 @@ function makeMarkers(){
 	for (i=0; i< myStuds.length; i++)
 	{
 		lat = myStuds[i].lat;
+		lng = myStuds[i].lng;
 		markerArray[i] = new google.maps.Marker({
 	    position: createCoords(myStuds[i]["lat"], myStuds[i]["lng"]),
 	    map: map,
