@@ -63,8 +63,8 @@ function drawMap() //fills map, marks self with infowindow
         var myWindow = new google.maps.InfoWindow({
                 content: myContent
         });
-        google.maps.event.addListener(myMarker, 'click', function() {
-                myWindow.open(map, myMarker);
+        google.maps.event.addListener(userMarker, 'click', function() {
+                myWindow.open(map, userMarker);
         });
         getStudents();
 }
