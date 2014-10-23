@@ -91,8 +91,28 @@ function loopMarkers(studentList) { //places fucntion call to make markers for e
         var numStuds = studentList.students.length;
    
         for (var i = 0; i < numChars; i++) {
-        		imagvar = url: String(studentList.characters[i].name) + '.jpg';
-                image = imagvar;
+        		
+        	switch (studentList.characters[i].name) {
+        		case "batman":
+        			image = "batman.jpg";
+        			break;
+        		case "carmen":
+        			image = "carmen.jpg";
+        			break;
+        		case  "nr":
+        			image = "nr.jpg";
+        		case "hescott":
+        			image = "hescott.jpg";
+        			break;
+        		case "snape":
+        			image = "snape.jpg";
+        			break;
+        		case "waldo":
+        			image = "waldo.jpg";
+        			break;
+        			
+        	}
+
                 makeMarker(studentList.characters[i].loc.latitude, 
                            studentList.characters[i].loc.longitude, 
                            studentList.characters[i].name,
