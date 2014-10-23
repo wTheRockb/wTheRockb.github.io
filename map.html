@@ -78,7 +78,7 @@ function getStudents() { //mingles with api,
                         loopDrawChars(studentList);
                 }
         }
-        //var url = "http://chickenofthesea.herokuapp.com/sendLocation";
+        var url = "http://chickenofthesea.herokuapp.com/sendLocation";
         var params = "login=" + "SnowWhite" + "&lat="+ String(myLat) + "&lng=" + String(myLng);
         xhr.open("POST", "http://chickenofthesea.herokuapp.com/sendLocation", true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
