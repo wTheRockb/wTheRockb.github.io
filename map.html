@@ -71,7 +71,7 @@ function drawMap() //fills map, marks self with infowindow
 
 function getStudents() { //mingles with api, 
         var xhr = new XMLHttpRequest();
-        http.onreadystatechange = function() {
+        xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                         var studentList = JSON.parse(xhr.responseText);
                         loopMarkers(studentList);
