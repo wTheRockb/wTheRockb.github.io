@@ -145,14 +145,14 @@ function makeMarker(lat, lng, title) //creates marker and window for entered cha
                 }
 
 
-        renderLine(cCoords);
+        
         cMarker = new google.maps.Marker({
                 position: cCoords,
                 title: title,
                 icon: image
         });
         cMarker.setMap(map);
-                
+        renderLine(cCoords);     
         var cContent = '<h1>' + title + '<br></h1>' +
                         '<p><b> Lat: </b>' + lat + '<br>' +
                         '<b>Lng: </b>' + lng + '</p>';
