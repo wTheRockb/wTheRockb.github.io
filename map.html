@@ -120,7 +120,7 @@ function makeMarker(lat, lng, title) //creates marker and window for entered cha
              switch (title) {
                     case "batman":
                         image = "batman.png";
-                        console.log("test");
+                        
                         break;
                     case "carmen":
                         image = "carmen.png";
@@ -149,7 +149,7 @@ function makeMarker(lat, lng, title) //creates marker and window for entered cha
         cMarker = new google.maps.Marker({
                 position: cCoords,
                 title: title,
-                icon: image.url
+                icon: image
         });
         cMarker.setMap(map);
                 
