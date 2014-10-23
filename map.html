@@ -7,17 +7,17 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css" type="text/css" />
 <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?sensor=true">
+      src="http://maps.googleapis.com/maps/api/js?sensor=true">
       </script>
 
 <script>
 var myLat;
 var myLng;
-var myLoc = new google.maps.LatLng(myLat, myLng);
+//var myLoc = new google.maps.LatLng(myLat, myLng);
 var infowindow = new google.maps.InfoWindow();
 var request =  new XMLHttpRequest();
 var mapOptions = {
-          center:  {lat:0, lng:0},
+          center:  ,
           zoom: 16
 };
 var response;
@@ -25,18 +25,20 @@ var map;
 
 
 
-function initialize () {
+function getmylocation () {
 	 map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-	 getmylocation();
+	 drawMap();
 }
 
-function getmylocation(){
+function initialize(){
  if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                         myLat = position.coords.latitude;
                         myLng = position.coords.longitude;
-                        drawMap();
+                        myLoc = new google.maps.LatLng(myLat, myLng);
+                        
+                        getmylocation();
                 });
         }
        else {
