@@ -24,6 +24,7 @@ var response;
 var map;
 
 
+
 function initialize () {
 	 map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
@@ -31,14 +32,14 @@ function initialize () {
 }
 
 function getmylocation(){
- //if (navigator.geolocation) {
+ if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                         myLat = position.coords.latitude;
                         myLng = position.coords.longitude;
                         drawMap();
                 });
-  //      }
-  //      else {
+        }
+       else {
                 alert("Geolocation is not supported by your web browser.  Upgrade required");
         }
 }
@@ -214,7 +215,7 @@ function haversineFormula(lat, lng)
         return R * c *0.6213;
 }
 
-
+google.maps.event.addDomListener(window, 'load', initialize);
 
 
 </script>
