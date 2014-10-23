@@ -31,14 +31,14 @@ function initialize () {
 }
 
 function getmylocation(){
- if (navigator.geolocation) {
+ //if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                         myLat = position.coords.latitude;
                         myLng = position.coords.longitude;
                         drawMap();
                 });
-        }
-        else {
+  //      }
+  //      else {
                 alert("Geolocation is not supported by your web browser.  Upgrade required");
         }
 }
