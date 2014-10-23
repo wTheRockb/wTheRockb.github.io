@@ -96,31 +96,11 @@ function loopMarkers(studentList) { //places fucntion call to make markers for e
    
         for (var i = 0; i < numChars; i++) {
         		//console.log("cases");
-        	switch (studentList.characters[i].name) {
-        		case "batman":
-        			image = "batman.jpg";
-        			break;
-        		case "carmen":
-        			image = "carmen.jpg";
-        			break;
-        		case  "nr":
-        			image = "nr.jpg";
-        		case "hescott":
-        			image = "hescott.jpg";
-        			break;
-        		case "snape":
-        			image = "snape.jpg";
-        			break;
-        		case "waldo":
-        			image = "waldo.jpg";
-        			break;
-
-        	}
+        	
 
                 makeMarker(studentList.characters[i].loc.latitude, 
                            studentList.characters[i].loc.longitude, 
-                           studentList.characters[i].name,
-                           image);
+                           studentList.characters[i].name);
         }
       
         for (var j = 0; j < numStuds; j++) {
@@ -131,11 +111,32 @@ function loopMarkers(studentList) { //places fucntion call to make markers for e
         }
 }
 
-function makeMarker(lat, lng, title, image) //creates marker and window for entered char
+function makeMarker(lat, lng, title) //creates marker and window for entered char
 {
         
         var cCoords = new google.maps.LatLng(lat, lng);
         var cMarker;
+             switch (title) {
+                    case "batman":
+                        image = "batman.jpg";
+                        break;
+                    case "carmen":
+                        image = "carmen.jpg";
+                        break;
+                    case  "nr":
+                        image = "nr.jpg";
+                    case "hescott":
+                        image = "hescott.jpg";
+                        break;
+                    case "snape":
+                        image = "snape.jpg";
+                        break;
+                    case "waldo":
+                        image = "waldo.jpg";
+                        break;
+
+                }
+
 
         renderLine(cCoords);
         cMarker = new google.maps.Marker({
