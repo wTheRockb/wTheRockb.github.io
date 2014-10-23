@@ -37,7 +37,7 @@ function initialize(){
                         myLat = position.coords.latitude;
                         myLng = position.coords.longitude;
                         myLoc = new google.maps.LatLng(myLat, myLng);
-                        
+                        mapOptions.center = myLoc;
                         getmylocation();
                 });
         }
