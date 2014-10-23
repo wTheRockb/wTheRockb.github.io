@@ -17,7 +17,7 @@ var myLoc = new google.maps.LatLng(myLat, myLng);
 var infowindow = new google.maps.InfoWindow();
 var request =  new XMLHttpRequest();
 var mapOptions = {
-          center:  {0, 0},
+          center:  myLoc,
           zoom: 16
 };
 var response;
@@ -48,12 +48,12 @@ function drawMap() //fills map, marks self with infowindow
         
         me = new google.maps.LatLng(myLat, myLng);        
         var userIcon = {
-               // url: 'ele.jpeg',
+                url: 'ele.jpg',
         };
         var userMarker = new google.maps.Marker({
                 position: me,
                 title: "User",
-                //icon: userIcon.url
+                icon: userIcon.url
         });
         userMarker.setMap(map);
 
