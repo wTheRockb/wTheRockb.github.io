@@ -48,7 +48,7 @@ function drawMap() //fills map, marks self with infowindow
         
         me = new google.maps.LatLng(myLat, myLng);        
         var userIcon = {
-                url: 'ele.jpeg',
+               // url: 'ele.jpeg',
         };
         var userMarker = new google.maps.Marker({
                 position: me,
@@ -110,7 +110,7 @@ function loopMarkers(studentList) { //places fucntion call to make markers for e
         		case "waldo":
         			image = "waldo.jpg";
         			break;
-        			
+
         	}
 
                 makeMarker(studentList.characters[i].loc.latitude, 
