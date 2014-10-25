@@ -95,12 +95,12 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 
 
 
-	        request.onreadystatechange = function() {
-	                if (request.readyState == 4 && request.status == 200) {
-	                        placeList = JSON.parse(request.responseText);
-	                        console.log("parsed the list loop");
-	                    }
-	                }
+	request.onreadystatechange = function() {
+	if (request.readyState == 4 && request.status == 200) {
+	placeList = JSON.parse(request.responseText);
+	console.log("parsed the list loop");
+	    }
+	}
 
 
 
