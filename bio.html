@@ -77,7 +77,7 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhr.open("GET", requestURL, true);
 
-	console.log(xhr.responseText);
+	console.log(request.responseText);
 }
 
 window.onload =yelp("bars", 42.4154890, -71.1276440, "walking", 0);
