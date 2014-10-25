@@ -79,7 +79,7 @@ function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
 	console.log(xhr.responseText);
 }
 
-document.getElementById("target").addEventListener("click", yelp("bars", 42.4154890, -71.1276440, "walking"));
+window.onload =yelp("bars", 42.4154890, -71.1276440, "walking");
 
 </script>
 
