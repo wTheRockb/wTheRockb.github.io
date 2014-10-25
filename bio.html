@@ -54,7 +54,10 @@ function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
 	if (mode == "driving") {
 		sRadius = 1600;
 	}
-
+	console.log(term);
+	console.log(epiAddress);
+	console.log(sRadius);
+	
 	requestURL = "http://api.yelp.com/v2/search?term=" + term + "&location=" + epiAddress "&radius_filter" + sRadius;     
 	 // + "&cll=" + geolocation
 
