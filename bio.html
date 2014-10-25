@@ -73,8 +73,8 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 
 
 
-	request.open("POST", "http://chickenofthesea.herokuapp.com/sendLocation", true);
-	request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	
+	//request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	request.open("GET", requestURL, true);
 
 	console.log(request.responseText);
