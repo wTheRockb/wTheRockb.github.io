@@ -1,20 +1,5 @@
-<!DOCTYPE html>
 
-<html>
-	
-	<head>
-		<meta charset="utf-8">
-		<title> yelp</title>
-		 <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=places">
-    </script>
-		<script src="/bower_components/oauth-signature/dist/oauth-signature.js"></script>
-		
-	</head>
-</html>
-<body>
 
-<script>
 
 function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string address
 	console.log("function started");
@@ -22,10 +7,10 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 	var epiAddress;
 	var sRadius;
 	var request;
-	var consumKey = "qyE-UGFSSgidsbrLfV9PlQ";
+	/*var consumKey = "qyE-UGFSSgidsbrLfV9PlQ";
 	var consumSec = "Ad52o40WbgvY4-Qynjf2OW0DsSY";
 	var tok = "paux-4QSmjAw_KSww288lMZGtg9T3qJW";
-	var tokSec= "uYLq_B_7FrkpELdynCRFV5-VeMk";
+	var tokSec= "uYLq_B_7FrkpELdynCRFV5-VeMk"; */
 
 	if (address.length < 5) { //this converts a geolocation to an address thru gmaps
 		
@@ -89,19 +74,23 @@ var request = {
 				}
 			}
 
+}
+function createMarker(place)
+			{
+				var placeLoc = place.geometry.location;
+				var marker = new google.maps.Marker({
+					map: map,
+					position: place.geometry.location
+				});
 
+				google.maps.event.addListener(marker, 'click', function() {
+					infowindow.close();
+					infowindow.setContent(place.name);
+					infowindow.open(map, this);
+				});
 
 
 
 }
 
-window.onload = yelp("bars", 42.4154890, -71.1276440, "walking", "no");
-
-</script>
-
-<div id="target">
-<p> click me </p>
-</div>
-
-</body>
-</html>
+yelp("food", 42.4055470, -71.1238240, "this is my address");
