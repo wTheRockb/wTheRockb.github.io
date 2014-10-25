@@ -16,12 +16,13 @@
 
 <script>
 
-function yelp(string term, number inputLat, number inputLng, string mode) { //and maybe a string address
-
+function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
+	console.log("function started");
 	var epiAddress;
 	var sRadius;
 	if (address.length > 1) { //this converts a geolocation to an address thru gmaps
 		function codeLatLng() {
+			console.log("codeLatLng just ran");
 		  var geoInput = document.getElementById('latlng').value;
 		  var latlngStr = input.split(',', 2);
 		  var lat =inputLat;
@@ -48,6 +49,7 @@ function yelp(string term, number inputLat, number inputLng, string mode) { //an
 
 	if (mode == "walking") { //set search radius in meters based on mode of transportation
 		sRadius = 800;
+		console.log("walking radisu set");
 	}
 	if (mode == "driving") {
 		sRadius = 1600;
@@ -60,6 +62,7 @@ function yelp(string term, number inputLat, number inputLng, string mode) { //an
 	        request.onreadystatechange = function() {
 	                if (request.readyState == 4 && request.status == 200) {
 	                        placeList = JSON.parse(request.responseText);
+	                        console.log("parsed the list loop");
 	                    }
 	                }
 
@@ -72,6 +75,12 @@ function yelp(string term, number inputLat, number inputLng, string mode) { //an
 	console.log(xhr.responseText);
 }
 
+document.getElementById("target").addEventListener("click", yelp("bars", 42.4154890, -71.1276440, "walking"));
+
 </script>
+
+<p id="target"> click me </p>
+
+
 </body>
 </html>
