@@ -67,27 +67,32 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 	console.log(sRadius);
 	var milliseconds = (new Date).getTime(); 
 	 
-	var rand1 = Math.random();
-	var rand2 = rand1.toString();
-	
-var yelp = require("yelp").createClient({
-  consumer_key: consumKey, 
-  consumer_secret: consumSec,
-  token: tok,
-  token_secret: tokSec
-});
 
-// See http://www.yelp.com/developers/documentation/v2/search_api
-yelp.search({term: "food", location: "Montreal"}, function(error, data) {
-  console.log(error);
-  console.log(data);
-});
+var request = {
+					location: latlng,
+					radius: '500',
+					types: ['food']
+				};
+				service = new google.maps.places.PlacesService(map);
+				service.search(request, callback);
+			}
+			
+			// Taken from http://code.google.com/apis/maps/documentation/javascript/places.html
+			function callback(results, status)
+			{
+				if (status == google.maps.places.PlacesServiceStatus.OK) {
+					//alert("Got places back!");
+					places = results;
+					for (var i = 0; i < results.length; i++) {
+						createMarker(results[i]);
+					}
+				}
+			}
 
-// See http://www.yelp.com/developers/documentation/v2/business
-yelp.business("yelp-san-francisco", function(error, data) {
-  console.log(error);
-  console.log(data);
-});
+
+
+
+
 }
 
 window.onload = yelp("bars", 42.4154890, -71.1276440, "walking", "no");
