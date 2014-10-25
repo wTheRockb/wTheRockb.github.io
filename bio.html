@@ -18,9 +18,15 @@
 
 function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string address
 	console.log("function started");
+
 	var epiAddress;
 	var sRadius;
 	var request;
+	var consumKey = "qyE-UGFSSgidsbrLfV9PlQ";
+	var consumSec = "Ad52o40WbgvY4-Qynjf2OW0DsSY";
+	var tok = "paux-4QSmjAw_KSww288lMZGtg9T3qJW";
+	var tokSec= "uYLq_B_7FrkpELdynCRFV5-VeMk";
+
 	if (address.length < 5) { //this converts a geolocation to an address thru gmaps
 		
 			console.log("conversion from geo to addres begun");
@@ -37,7 +43,7 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 		      if (results[1]) {
 		      	console.log("test2");
 		        epiAddress = results[1].formatted_address;
-
+		        console.log(results[1].formatted_address);
 		       
 		      } else {
 		        alert('No results found');
@@ -48,13 +54,10 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 		  });
 		}
 
-	
-
-
 
 	if (mode == "walking") { //set search radius in meters based on mode of transportation
 		sRadius = 800;
-		console.log("walking radisu set");
+		console.log("walking radius set");
 	}
 	if (mode == "driving") {
 		sRadius = 1600;
@@ -62,12 +65,36 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 	console.log(term);
 	console.log(epiAddress);
 	console.log(sRadius);
+	var milliseconds = (new Date).getTime(); 
+	 
+	var rand1 = Math.random();
+	var rand2 = rand1.toString();
+	
+	var request = 'GET',
+    url = "http://api.yelp.com/v2/search?term=" + term + "&location=" + epiAddress + "&radius_filter" + sRadius,
+    parameters = {
+        oauth_consumer_key : consumKey,
+        oauth_token : tok,
+        oauth_nonce : rand2,
+        oauth_timestamp : milliseconds,
+        oauth_signature_method : 'HMAC-SHA1',
+        // oauth_version : '1.0',
+        //file : 'vacation.jpg',
+        //size : 'original'
+    },
+    consumerSecret = consumSec,
+    tokenSecret = tokSec,
+    // generates a RFC3986 encoded, BASE64 encoded HMAC-SHA1 hash
+    encodedSignature = oauthSignature.generate(request, url, parameters, consumerSecret, tokenSecret),
+    // generates a BASE64 encode HMAC-SHA1 hash
+    signature = oauthSignature.generate(request, url, parameters, consumerSecret, tokenSecret, 
+        { encodeSignature: false}),
+    ;
 
-	requestURL = "http://api.yelp.com/v2/search?term=" + term + "&location=" + epiAddress + "&radius_filter" + sRadius;     
-	 // + "&cll=" + geolocation
 
 
-	 request = new XMLHttpRequest();
+
+
 	        request.onreadystatechange = function() {
 	                if (request.readyState == 4 && request.status == 200) {
 	                        placeList = JSON.parse(request.responseText);
@@ -78,13 +105,12 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 
 
 	
-	//request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	request.open("GET", requestURL, true);
+
 
 	console.log(request.responseText);
 }
 
-window.onload =yelp("bars", 42.4154890, -71.1276440, "walking", "no");
+window.onload = yelp("bars", 42.4154890, -71.1276440, "walking", "no");
 
 </script>
 
