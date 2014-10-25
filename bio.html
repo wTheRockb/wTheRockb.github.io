@@ -21,7 +21,7 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
 	var epiAddress;
 	var sRadius;
 
-	if (address.length > 5) { //this converts a geolocation to an address thru gmaps
+	if (address.length < 5) { //this converts a geolocation to an address thru gmaps
 		function codeLatLng() {
 			console.log("codeLatLng just ran");
 		  var geoInput = document.getElementById('latlng').value;
