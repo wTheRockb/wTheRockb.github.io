@@ -55,7 +55,8 @@ function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
 		sRadius = 1600;
 	}
 
-	requestURL = "http://api.yelp.com/v2/search?term=" + term + "&location=" + epiAddress "&radius_filter" + sRadius;      // + "&cll=" + geolocation;
+	requestURL = "http://api.yelp.com/v2/search?term=" + term + "&location=" + epiAddress "&radius_filter" + sRadius;     
+	 // + "&cll=" + geolocation
 
 
 	var request = new XMLHttpRequest();
