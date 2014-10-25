@@ -16,10 +16,11 @@
 
 <script>
 
-function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
+function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string address
 	console.log("function started");
 	var epiAddress;
 	var sRadius;
+
 	if (address.length > 1) { //this converts a geolocation to an address thru gmaps
 		function codeLatLng() {
 			console.log("codeLatLng just ran");
@@ -79,7 +80,7 @@ function yelp( term, inputLat, inputLng, mode) { //and maybe a string address
 	console.log(xhr.responseText);
 }
 
-window.onload =yelp("bars", 42.4154890, -71.1276440, "walking");
+window.onload =yelp("bars", 42.4154890, -71.1276440, "walking", 0);
 
 </script>
 
