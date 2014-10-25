@@ -88,8 +88,8 @@ function yelp( term, inputLat, inputLng, mode, address) { //and maybe a string a
     encodedSignature = oauthSignature.generate(request, url, parameters, consumerSecret, tokenSecret),
     // generates a BASE64 encode HMAC-SHA1 hash
     signature = oauthSignature.generate(request, url, parameters, consumerSecret, tokenSecret, 
-        { encodeSignature: false}),
-    ;
+        { encodeSignature: false}), ;
+    
 
 
 
