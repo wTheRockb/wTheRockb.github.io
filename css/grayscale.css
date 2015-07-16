@@ -3,6 +3,36 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+.work-img {
+
+    height: 30vh;
+
+    
+}
+.work-img h3 {
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#hack {
+    background-color:#AA3939;
+}
+#adwords {
+    background-color:#2D882D;
+}
+#PM {
+    background-color:#71266E;
+}
+#ost {
+    background-color:#90A437;
+}
+
+#avatar {
+    height: 50%;
+    width: 50%;
+    padding-bottom: 2%;
+}
 
 body {
     width: 100%;
@@ -139,7 +169,7 @@ a:focus {
     text-align: center;
     background-color: #219ab3;
 
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/back-edit1.jpg) no-repeat bottom center scroll;
     background-color: #000;
     
     -webkit-background-size: cover;
@@ -251,7 +281,7 @@ a:focus {
 }
 
 #download {
-    padding-top: 90px;
+    padding-top: 20px;
 
 }
 
@@ -259,8 +289,8 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll; 
-    /*background-color: red;*/
+    /*background: url(../img/downloads-bg.jpg) no-repeat center center scroll; 
+    background-color: red;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -451,6 +481,7 @@ ul {
 
 .about-section {
     background-color: black;
+    padding-bottom: 4%;
 }
 
 .contact-section {
@@ -628,4 +659,16 @@ fieldset[disabled] #hire-primary.active {
     outline: 0;
     color: #000;
     
+}
+
+
+*/
+
+#download {
+    background:url(../img/rock-edit.jpg) no-repeat bottom center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 90vh;
 }
