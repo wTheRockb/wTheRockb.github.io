@@ -293,7 +293,7 @@ a:focus {
     }
 }
 
-#download {
+#work {
     padding-top: 20px;
 
 }
@@ -677,7 +677,7 @@ fieldset[disabled] #hire-primary.active {
 
 */
 
-#download {
+#work {
     background:url(../img/rock-edit.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
