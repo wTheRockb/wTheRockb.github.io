@@ -13,33 +13,25 @@
     
 }
 .work-img {
-
+    background-color: black;
     height: 30vh;
+    -webkit-transition: color .6s;
+    transition: color .6s;
 
-    
 }
+
 .work-img h3 {
     position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-#hack {
-    background-color:#AA3939;
-    background-color:black;
+.work-img p {
+    color:black;
+    font-size: 10;
+    font-family: arial;
 }
-#adwords {
-    background-color:#2D882D;
-    background-color:black;
-}
-#PM {
-    background-color:#71266E;
-    background-color:black;
-}
-#ost {
-    background-color:#90A437;
-    background-color:black;
-}
+
 
 #avatar {
     height: 50%;
@@ -684,4 +676,18 @@ fieldset[disabled] #hire-primary.active {
     background-size: cover;
     -o-background-size: cover;
     height: 90vh;
+}
+
+
+
+.work-img:hover {
+    -webkit-transition-duration:;
+    color: black;
+    background-color: white;
+}
+
+.work-img p {
+    color:black;
+    font-size: small;
+    font-family: monospace;
 }
