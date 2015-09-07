@@ -77,6 +77,7 @@ p {
         font-size: 20px;
         line-height: 1.6;
     }
+
 }
 
 a {
@@ -497,187 +498,30 @@ ul {
     font-weight: bold;
 }
 
-
-/*
-bootstrp styles
-#hire {
-display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-#hire:focus,
-#hire:active:focus,
-#hire.active:focus,
-#hire.focus,
-#hire:active.focus,
-#hire.active.focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-#hire:hover,
-#hire:focus,
-#hire.focus {
-  color: #333;
-  text-decoration: none;
-}
-#hire:active,
-#hire.active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
-}
-#hire.disabled,
-#hire[disabled],
-fieldset[disabled] #hire {
-  pointer-events: none;
-  cursor: not-allowed;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  opacity: .65;
-}
-#hire-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
-}
-#hire-default:hover,
-#hire-default:focus,
-#hire-default.focus,
-#hire-default:active,
-#hire-default.active,
-.open > .dropdown-toggle#hire-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-#hire-default:active,
-#hire-default.active,
-.open > .dropdown-toggle#hire-default {
-  background-image: none;
-}
-#hire-default.disabled,
-#hire-default[disabled],
-fieldset[disabled] #hire-default,
-#hire-default.disabled:hover,
-#hire-default[disabled]:hover,
-fieldset[disabled] #hire-default:hover,
-#hire-default.disabled:focus,
-#hire-default[disabled]:focus,
-fieldset[disabled] #hire-default:focus,
-#hire-default.disabled.focus,
-#hire-default[disabled].focus,
-fieldset[disabled] #hire-default.focus,
-#hire-default.disabled:active,
-#hire-default[disabled]:active,
-fieldset[disabled] #hire-default:active,
-#hire-default.disabled.active,
-#hire-default[disabled].active,
-fieldset[disabled] #hire-default.active {
-  background-color: #fff;
-  border-color: #ccc;
-}
-#hire-default .badge {
-  color: #fff;
-  background-color: #333;
-}
-#hire-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-#hire-primary:hover,
-#hire-primary:focus,
-#hire-primary.focus,
-#hire-primary:active,
-#hire-primary.active,
-.open > .dropdown-toggle#hire-primary {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
-}
-#hire-primary:active,
-#hire-primary.active,
-.open > .dropdown-toggle#hire-primary {
-  background-image: none;
-}
-#hire-primary.disabled,
-#hire-primary[disabled],
-fieldset[disabled] #hire-primary,
-#hire-primary.disabled:hover,
-#hire-primary[disabled]:hover,
-fieldset[disabled] #hire-primary:hover,
-#hire-primary.disabled:focus,
-#hire-primary[disabled]:focus,
-fieldset[disabled] #hire-primary:focus,
-#hire-primary.disabled.focus,
-#hire-primary[disabled].focus,
-fieldset[disabled] #hire-primary.focus,
-#hire-primary.disabled:active,
-#hire-primary[disabled]:active,
-fieldset[disabled] #hire-primary:active,
-#hire-primary.disabled.active,
-#hire-primary[disabled].active,
-fieldset[disabled] #hire-primary.active {
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-
-#hire {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-
-}
-
-#hire {
-    border: 1px solid #219ab3;
-    color: white;
-    background-color: transparent;
-}
-
-#hire:hover,
-#hire:focus {
-    border: 1px solid white;
-    outline: 0;
-    color: #000;
-    
+@media (max-width: 767px){
+    #work {
+        background-color: #219ab3;
+    }
 }
 
 
-*/
 
-#work {
+
+@media (min-width: 768px) {
+    #work {
     background:url(../img/rock-edit.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
     height: 90vh;
+    }
 }
-
+@media (max-width: 767px){
+    #work {
+        background-color: #219ab3;
+    }
+}
 
 
 .work-img:hover {
@@ -691,3 +535,4 @@ fieldset[disabled] #hire-primary.active {
     font-size: small;
     font-family: monospace;
 }
+
