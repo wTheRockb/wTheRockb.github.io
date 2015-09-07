@@ -1,273 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<!--
+	Astral by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Woody Butler - Developer, Marketer, Manager</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-<head>
+		<!-- Wrapper-->
+			<div id="wrapper">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#me" class="icon fa-home active"><span>Home</span></a>
+						<a href="#about" class="icon fa-user"><span>About</span></a>
+						<a href="#work" class="icon fa-folder"><span>Work</span></a>
+						<a href="mailto:forrestwbutler@gmail.com" class="icon fa-envelope"><span>Contact</span></a>
+						<a href="https://twitter.com/forrestwbutler" class="icon fa-twitter"><span>Twitter</span></a>
+						<a href="https://www.linkedin.com/in/woodybutler" class="icon fa-linkedin"><span>LinkedIn</span></a>
+						<a href="https://dl.dropboxusercontent.com/u/67244708/WoodyButlerResume.pdf" class="icon fa-file-o"><span>Resume</span></a>
+					</nav>
 
-    <title>Woody Butler - Developer & Marketer </title>
+				<!-- Main -->
+					<div id="main">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+						<!-- Me -->
+							<article id="me" class="panel">
+								<header>
+									<h1>Woody Butler</h1>
+									<p>Software Developer <br> Data Driven Marketer</p>
+								</header>
+								<a href="#about" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Work</h2>
+								</header>
 
+								<section>
+									<div class="row">
+										<div class="work"  onmouseenter="unBlur('hack');">
+											<h3> HackUST2015</h3>
+											<p id="hack"> Organized <a href="http://hack.ust.hk/">largest collegiate hackathon in history of hong kong.</a> Led meetings, built website and handled external university marketing.</p> 
+										</div>
+										<div class="work"  onmouseenter="unBlur('adwords');">
+											<h3> Adwords </h3>
+                    						<p id="adwords"> After heavy research on website traffic through <a href="http://www.google.com/analytics/"> Google Analytics and Adwords </a>, performed optimizations of company's pay-per-click spending resulting $20,000 projected savings. </p>
+										</div>
+										<div class="work"  onmouseenter="unBlur('ost');">
+											<h3> OST stream </h3>
+                    						<p id="ost"> Built video game soundtrack streaming service using Django, Python and Javascript.</p>
+										</div>
+										<div class="work"  onmouseenter="unBlur('pm');">
+											<h3> Project Management </h3>
+                    						<p id="pm"> Lead marketing team in project for external client. Deliverables included 80 page report, blog post, whitepaper and presentation, which were translated into a <a href="http://www.paytronix.com/media/9877539/engage-millennial-webinar.mp4">webinar.</a> </p>
+										</div>
+									</div>
+								</section>
+							</article>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+						<!-- Contact -->
+							<article id="about" class="panel">
+								<header>
+									<img src="images/biopic.gif" id="biopic">
+									<h2>About Woody </h2>
+								</header>
+								<p> I'm working for a life in which I can code and interact with other human beings, while still having enough time to enjoy late night runs in the rain. Graduating from Tufts University spring of 2016 and actively pursuing full-time work.</p>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+								<p>I've run hackathons, marketing projects, and a lot of miles.</p>
+								<table>
+									<tr>
+										<td class="just-right"> Python </td>
+										<td> C++ </td>
 
-</head>
+									</tr>
+									<tr>
+										<td class="just-right"> HTML/CSS </td>
+										<td> Javascript </td>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+									</tr>
+									<tr>
+										<td class="just-right"> Google Analytics/Adwords </td>
+										<td> Java </td>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-upload"></i>  <span class="light">To the</span> Top
-                </a>
-            </div>
+									</tr>
+									<tr>
+										<td class="just-right"> Bash Shell </td>
+										<td> Product Management </td>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#work">Work</a>
-                    </li>
-                    
-                    <li> 
-                        <a class="page-scroll" href="#contact">Reach out</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+									</tr>
+							</article>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Woody Butler</h1>
-                        <p class="intro-text"> Software Development | Data-driven Marketing</p>
-                        <div id="hire" href="#contact"  class="page-scroll">
-                            <a href="#contact" id="hiremebut" class="page-scroll"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Hire Me &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </a>
-                        </div>
-                    </div>           
-                </div>
-            </div>
-        </div>
-    </header>
+					</div>
 
-    <!-- About Section -->
-    <section id="about" class="container about-section content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <img id="avatar" src="biopic.gif">
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Woody Butler 2015.</li>
+						</ul>
+					</div>
 
-                <h2>About Woody</h2>
-                <p>I'm working for a life in which I can code and interact with other human beings, while still having enough time to enjoy late night runs in the rain. Graduating from Tufts University spring of 2016 and actively pursuing full-time work. </p>
-                <p>I've run hackathons, marketing projects, and a lot of miles. </p>
-                
-            </div>
-        </div>
-        <!-- skills   -->
+			</div>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
 
-
-        <div class="container">
-            <div class="row">
-                
-                <div id="left-skill" class="col-md-4 col-md-offset-1">
-                    <ul class="no-bullets">
-                        <li> <span class="ability-text"> C++ </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                        <li> <span class="ability-text"> Java </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                        <li> <span class="ability-text"> HTML/CSS </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                        <li> <span class="ability-text"> Javascript </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span>  
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-
-                    </ul>
-                </div>
-                <div id="right-skill" class="col-md-4 ">
-                    <ul class="no-bullets">
-                        <li> <span class="ability-text"> PM </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-
-                        </li>
-                        <li> <span class="ability-text"> Google Analytics </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span>
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                        <li> <span class="ability-text"> Bash Shell </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                        <li> <span class="ability-text"> Electric Guitar </span>
-                            <span id="empty-star" class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                            <span class="glyphicon glyphicon-star filled"></span> 
-                        </li>
-                    </ul>
-                </div>
-               
-            </div>
-        </div>
-        
-    </section>
-
-
-
-    <!-- Download Section -->
-    <section id="work"  class="content-section ">
-        <div class="download-section">
-            
-            <h2 id="past-title">Work</h2>
-            <div class="col-md-3 col-md-offset-3">
-                <div id="hack"class="work-img">
-                    
-                    <h3> HackUST2015 <h3>
-                    <p> Organized <a href="http://hack.ust.hk/">largest collegiate hackathon in history of hong kong.</a> Led meetings, built website and handled external university marketing.</p>
-
-            
-                </div>
-                <br>
-                <div id="adwords" class="work-img">
-                    <h3> Adwords <h3>
-                    <p> After heavy research on website traffic through <a href="http://www.google.com/analytics/"> Google Analytics and Adwords </a>, performed optimizations of company's pay-per-click spending resulting $20,000 projected savings. </p>
-
-                </div>
-                
-            </div>
-
-            <div class="col-md-3">
-                <div id="ost" class="work-img">
-                    <h3> OST stream <h3>
-                    <p> Built <a href+"">video game soundtrack streaming service</a> using Django.</p>
-                </div>
-                
-                <br>
-                <div id="PM" class="work-img">
-                    <h3> Project Management <h3>
-                    <p> Led marketing team in project for external client. Deliverables included 80 page report, blog post, whitepaper and presentation, which were translated into a <a href="http://www.paytronix.com/media/9877539/engage-millennial-webinar.mp4">webinar.</a> </p>
-                </div>
-                 
-            </div>           
-        </div>
-        <div class="row"><span></span></div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container contact-section content-section text-center">
-        <div class="row"> 
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2> Let's talk </h2>
-                
-                <p><a href="mailto:forrestwbutler@gmail.com">forrestwbutler@gmail.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/forrestwbutler" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/wTheRockb" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/woodybutler" class="btn btn-default btn-lg"><img id='linkedin' src="img/linkedin_icon.png"> LinkedIn </a>
-                    </li>
-                    
-                </ul>
-            </div>
-         </div>
-    </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p> <h6> Design adapted by <a href="http://www.woodybutler.weebly.com"> Woody 'The Rock' Butler </a> from the <a href="http://startbootstrap.com/template-overviews/grayscale/"> Grayscale theme </a> </h6></p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
-
-</body>
-
+	</body>
 </html>
