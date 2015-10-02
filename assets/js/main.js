@@ -1,6 +1,6 @@
 function unBlur(id)
 	{
-		tar = document.getElementById(id);
+		var tar = document.getElementById(id);
 		tar.style.color = "black";
 		tar.style.textShadow="0px 0px 0px black";
 	}
