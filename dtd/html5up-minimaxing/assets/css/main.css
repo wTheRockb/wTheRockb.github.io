@@ -1340,7 +1340,7 @@
 		/* Banner */
 
 			#banner-wrapper {
-				background: #c8d2bc url(images/bg1.png);
+				background: #c8d2bc url(../../images/dtd_beta_mu_shelter.jpg);
 				padding: 2em 0;
 			}
 
@@ -1351,12 +1351,13 @@
 				box-sizing: content-box;
 				position: relative;
 				width: 1160px;
-				height: 265px;
+				height: 480px;
 				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 				border-radius: 10px;
 				padding: 20px;
 				background: #fff url(images/banner.jpg) no-repeat 20px 20px;
 				background-size: 1160px 265px;
+				opacity: 0.7;
 			}
 
 				#banner h2 {
@@ -1572,7 +1573,7 @@
 		/* Banner */
 
 			#banner-wrapper {
-				background: #c8d2bc url(images/bg1.png);
+				background: #c8d2bc url(../images/dtd_beta_mu_shelter.jpg);
 				display: none;
 			}
 
